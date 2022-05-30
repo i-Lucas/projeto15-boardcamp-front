@@ -13,7 +13,7 @@ const queryStringBuilder = query => Object.keys(query).length ? '?' + Object.key
 
 const instance = axios.create({
   //baseURL: 'http://localhost:4000'
-  baseURl: 'https://boardcamp10.herokuapp.com'
+  baseURL: 'https://boardcamp10.herokuapp.com'
 });
 
 for (const method of methods) {
