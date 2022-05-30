@@ -18,7 +18,7 @@ export default function Rentals () {
       setRentals(rentals);
     }).catch(err => {
       console.error(err);
-      alert('Não foi possível buscar aluguéis!');
+      alert(`Não foi possível buscar aluguéis!\n\n${err.data}`);
     });
   }
 

@@ -29,7 +29,7 @@ export default function Customer () {
       history.push('/customers');
     }).catch(err => {
       console.error(err);
-      alert('Não foi possível criar cliente!');
+      alert(`Não foi possível criar cliente!\n\n${err.data}`);
     });
   }
 

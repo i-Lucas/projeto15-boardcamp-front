@@ -26,7 +26,7 @@ export default function Customer () {
       setCategories(categories.map(c => ({ value: c.id, label: c.name })));
     }).catch(err => {
       console.error(err);
-      alert('Não foi possível obter categorias para criação de jogo!');
+      alert(`Não foi possível obter categorias para criação de jogo!\n\n${err.data}`);
     })
   }, []);
 
@@ -43,7 +43,7 @@ export default function Customer () {
       history.push('/games');
     }).catch(err => {
       console.error(err);
-      alert('Não foi possível criar categoria!');
+      alert(`Não foi possível criar categoria!\n\n${err.data}`);
     });
   }
 

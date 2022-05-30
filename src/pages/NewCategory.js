@@ -22,8 +22,8 @@ export default function Customer () {
     ).then(() => {
       history.push('/categories');
     }).catch(err => {
-      console.error(err);
-      alert('Não foi possível criar categoria!');
+      console.error(err.data);
+      alert(`Não foi possível criar categoria!\n\n${err.data}`);
     });
   }
 

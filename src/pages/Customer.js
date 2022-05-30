@@ -28,7 +28,7 @@ export default function Customer () {
       setCustomer(customer);
     }).catch(err => {
       console.error(err);
-      alert('Não foi possível buscar dados do cliente!');
+      alert(`Não foi possível buscar dados do cliente!\n\n${err.data}`);
     });
   }
 
@@ -37,7 +37,7 @@ export default function Customer () {
       setRentals(rentals);
     }).catch(err => {
       console.error(err);
-      alert('Não foi possível obter lista de alugéis do cliente!');
+      alert(`Não foi possível obter lista de alugéis do cliente!\n\n${err.data}`);
     });
   }
 
@@ -71,7 +71,7 @@ export default function Customer () {
       fetchCustomer();
     }).catch(err => {
       console.error(err);
-      alert('Não foi possível editar o cliente!');
+      alert(`Não foi possível editar o cliente!\n\n${err.data}`);
       fetchCustomer();
     });
   }

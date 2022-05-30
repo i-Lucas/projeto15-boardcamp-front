@@ -36,7 +36,7 @@ export default function NewRental () {
       setGames(games.map(g => ({ value: g.id, label: g.name })));
     }).catch(err => {
       console.error(err);
-      alert('Não foi possível obter lista de jogos!');
+      alert(`Não foi possível obter lista de jogos!\n\n${err.data}`);
     });
   }, []);
 
@@ -50,7 +50,7 @@ export default function NewRental () {
       history.push('/rentals');
     }).catch(err => {
       console.error(err);
-      alert('Não foi possível alugar jogo!');
+      alert(`Não foi possível alugar jogo!\n\n${err.data}`);
       setLoading(false);
     });
   }

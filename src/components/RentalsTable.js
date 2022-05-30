@@ -24,7 +24,7 @@ export default function RentalsTable ({ rentals, onAction, ...props }) {
       onAction();
     }).catch(err => {
       console.error(err);
-      alert('Não foi possível devolver aluguel!');
+      alert(`Não foi possível devolver aluguel!\n\n${err.data}`);
     });
   }
 
