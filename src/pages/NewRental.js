@@ -29,7 +29,7 @@ export default function NewRental () {
       setCustomers(customers.map(c => ({ value: c.id, label: `${c.name} - ${c.cpf.replace(/^(\d{3})(\d{3})(\d{3})(\d{2})$/, '$1.$2.$3-$4')}` })));
     }).catch(err => {
       console.error(err);
-      alert('Não foi possível obter lista de clientes!');
+      alert(`Não foi possível obter lista de clientes!\n\n${err.data}`);
     });
 
     gamesApi.list().then(games => {

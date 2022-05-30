@@ -15,7 +15,7 @@ export default function RentalsTable ({ rentals, onAction, ...props }) {
       onAction();
     }).catch(err => {
       console.error(err);
-      alert('Não foi possível excluir aluguel!');
+      alert(`Não foi possível excluir aluguel!\n\n${err.data}`);
     });
   }
 

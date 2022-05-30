@@ -12,7 +12,8 @@ const axiosWrapper = {};
 const queryStringBuilder = query => Object.keys(query).length ? '?' + Object.keys(query).map(k => `${k}=${query[k]}`).join('&') : '';
 
 const instance = axios.create({
-  baseURL: 'http://localhost:4000'
+  //baseURL: 'http://localhost:4000'
+  baseURl: 'https://git.heroku.com/boardcamp10.git'
 });
 
 for (const method of methods) {
